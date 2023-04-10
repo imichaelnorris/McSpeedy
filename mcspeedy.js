@@ -26,7 +26,17 @@ javascript:(function() {
   input.step = 1;
   input.value = currentIndex != -1 ? currentIndex : 1;
   input.style.flexGrow = "1";
+  input.setAttribute("list", "steplist");
   popup.appendChild(input);
+
+  const datalist = document.createElement('datalist');
+  datalist.id = "steplist";
+  for (var i = 0; i < ticks.length; i++) {
+    const option = document.createElement('option');
+    option.innerText = i;
+    datalist.appendChild(option);
+  }
+  popup.appendChild(datalist);
 
   const labels = document.createElement('div');
   labels.style.display = 'flex';
@@ -39,7 +49,7 @@ javascript:(function() {
     label.style.flex = '1';
     label.style.textAlign = 'center';
     label.style.width = `${100 / ticks.length}%`;
-    label.style.transform = 'rotate(45deg)';
+    label.style.transform = 'rotate(90deg)';
     labels.appendChild(label);
   });
 
