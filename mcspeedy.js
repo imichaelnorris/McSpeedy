@@ -50,8 +50,10 @@ javascript:(function() {
     label.style.textAlign = 'center';
     label.style.width = `${100 / ticks.length}%`;
     label.style.transform = 'rotate(90deg)';
+    
     label.addEventListener('mousedown', () => {
       input.value = ticks.indexOf(tick);
+      video.playbackRate = tick;
     });
     label.addEventListener('mouseup', () => {
       document.body.removeChild(popup);
