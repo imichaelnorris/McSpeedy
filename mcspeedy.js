@@ -61,7 +61,7 @@ javascript:(function() {
     document.body.removeChild(popup);
   });
 
-  input.style.width = `200px`;
+  input.style.width = `400px`;
 
   document.body.appendChild(popup);
 })();
