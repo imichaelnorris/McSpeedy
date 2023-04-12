@@ -87,12 +87,16 @@ javascript:(function() {
     input.style.width = `400px`;
   }
   
+  // Close window on Escape / Enter
   function keyListener() {
-     popup.addEventListener('keydown', (evt) => {
-       evt.preventDefault();
-       console.log(evt)
+     document.addEventListener('keydown', (evt) => {
+       /*evt.stopPropagation();
+       console.log(evt);*/
+       if (evt.key === 'Escape' || evt.key === 'Enter') {
+         document.body.removeChild(popup);
+       }
      });
-     popup.focus();
+     /*input.focus();*/
   }
   
   const popup = createPopup();
