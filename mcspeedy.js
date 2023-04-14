@@ -19,6 +19,7 @@ javascript:(function() {
     popup.style.border = '1px solid #000';
     popup.style.textAlign = 'center';
     popup.style.cursor = 'pointer';
+    popup.style.color = '#000';
     return popup;
   }
   
@@ -87,7 +88,7 @@ javascript:(function() {
     input.style.width = `400px`;
   }
   
-  // Close window on Escape / Enter
+  /* Close window on Escape / Enter*/
   function keyListener() {
      document.addEventListener('keydown', (evt) => {
        /*evt.stopPropagation();
