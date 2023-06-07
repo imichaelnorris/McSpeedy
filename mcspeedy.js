@@ -23,6 +23,12 @@ javascript:(function() {
     return popup;
   }
   
+  function createTextInput() {
+    const textInput = document.createElement('input');
+    textInput.type = 'text';
+    return textInput;
+  }
+  
   function createInput() {
     const input = document.createElement('input');
     input.type = 'range';
@@ -105,6 +111,8 @@ javascript:(function() {
   const labels = createLabels();
   popup.appendChild(labels);
   createTicks(ticks, labels);
+//   const textInput = createTextInput();
+//   popup.appendChild(textInput);
   onInput(input);
   keyListener();
 
