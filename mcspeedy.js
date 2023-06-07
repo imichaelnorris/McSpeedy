@@ -32,7 +32,6 @@ javascript:(function() {
     input.value = currentIndex != -1 ? currentIndex : 1;
     input.style.flexGrow = "1";
     input.setAttribute("list", "steplist");
-    popup.appendChild(input);
     return input;
   }
 
@@ -44,7 +43,6 @@ javascript:(function() {
       option.innerText = i;
       datalist.appendChild(option);
     }
-    popup.appendChild(datalist);
     return datalist;
   }
 
@@ -52,7 +50,6 @@ javascript:(function() {
     const labels = document.createElement('div');
     labels.style.display = 'flex';
     labels.style.justifyContent = 'space-between';
-    popup.appendChild(labels);
     return labels;
   }
   
@@ -102,8 +99,11 @@ javascript:(function() {
   
   const popup = createPopup();
   const input = createInput();
+  popup.appendChild(input);
   const datalist = createDatalist();
+  popup.appendChild(datalist);
   const labels = createLabels();
+  popup.appendChild(labels);
   createTicks(ticks, labels);
   onInput(input);
   keyListener();
