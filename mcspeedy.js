@@ -111,8 +111,8 @@ javascript:(function() {
   const labels = createLabels();
   popup.appendChild(labels);
   createTicks(ticks, labels);
-//   const textInput = createTextInput();
-//   popup.appendChild(textInput);
+/*   const textInput = createTextInput();
+     popup.appendChild(textInput);*/
   onInput(input);
   keyListener();
 
