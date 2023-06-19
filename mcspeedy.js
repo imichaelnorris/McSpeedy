@@ -9,6 +9,7 @@ javascript:(function() {
 
   function createPopup() {
     const popup = document.createElement('div');
+    popup.setAttribute('name', 'mcspeedy');
     popup.style.position = 'fixed';
     popup.style.top = '50%';
     popup.style.left = '50%';
@@ -115,6 +116,7 @@ javascript:(function() {
      popup.appendChild(textInput);*/
   onInput(input);
   keyListener();
-
-  document.body.appendChild(popup);
+  if (document.getElementsByName('mcspeedy').length == 0) {
+    document.body.appendChild(popup);
+  }
 })();
